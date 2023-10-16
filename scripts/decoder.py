@@ -101,7 +101,7 @@ field_definitions = [
 ]
 
 # Open the file and read the lines
-with open("datas/dataset_full.txt", "r") as file:
+with open("datas/dataset.txt", "r") as file:
     lines = file.readlines()
 
 # Iterate through the lines and process each one
