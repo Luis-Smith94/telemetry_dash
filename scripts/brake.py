@@ -6,7 +6,7 @@ from matplotlib.colors import LinearSegmentedColormap
 intensity_values = []
 
 # Read data from the text file
-with open('brake_data.txt', 'r') as file:
+with open('../datas/brake_data.txt', 'r') as file:
     for line in file:
         intensity = float(line.strip())
         intensity_values.append(intensity)

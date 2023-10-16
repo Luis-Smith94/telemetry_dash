@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
 # Read data from the text file
-with open('z.txt', 'r') as file:
+with open('../datas/z.txt', 'r') as file:
     data = [float(line.strip()) for line in file]
 
 # Create the X-axis values (assuming 1, 2, 3, ... for each data point)
