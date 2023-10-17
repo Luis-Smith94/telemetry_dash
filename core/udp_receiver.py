@@ -9,3 +9,5 @@ s.bind((HOST_IP, HOST_PORT))
 
 print(f"Attente de message sur {HOST_IP}, port {HOST_PORT}...")
 data, addr = s.recvfrom(BUFFER_SIZE)
+print(data)
+
