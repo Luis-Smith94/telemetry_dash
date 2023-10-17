@@ -121,9 +121,6 @@ def decode_data(hex_data):
     # Convert the hexadecimal string to bytes
     data = bytes.fromhex(hex_data)
 
-    # Reset the index for each line
-
-
     # Unpack and print each field
     for field_name, field_format in field_definitions:
         field_size = struct.calcsize(field_format)

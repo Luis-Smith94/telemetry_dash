@@ -1,10 +1,5 @@
 import socket
 import struct
-import threading
-import sys
-
-# Define global variable to control the loop
-exit_flag = False
 
 # Define the UDP listener function
 def udp_listener():
@@ -17,12 +12,9 @@ def udp_listener():
 
     print(f"Waiting for messages on {HOST_IP}, port {HOST_PORT}...")
 
-    while not exit_flag:
-        try:
-            data, addr = s.recvfrom(BUFFER_SIZE)
-            yield data.hex()  # Yield the hexadecimal data
-        except KeyboardInterrupt:
-            break
+    while True:
+        data, addr = s.recvfrom(BUFFER_SIZE)
+        yield data.hex()  # Yield the hexadecimal data
 
 # Define the data decoder function
 def decode_data(hex_data):
@@ -126,30 +118,33 @@ def decode_data(hex_data):
         ("TireWearRearRight", "f"),
         ("TrackOrdinal", "i")
     ]
+
     # Convert the hexadecimal string to bytes
     data = bytes.fromhex(hex_data)
 
-# Function to handle exit command
-def exit_program():
-    global exit_flag
-    exit_flag = True
+    decoded_data = {}  # Create a dictionary to store the decoded data
+
+    # Unpack and store each field in the dictionary
+    for field_name, field_format in field_definitions:
+        field_size = struct.calcsize(field_format)
+        field_data = data[index:index + field_size]
+        field_value = struct.unpack(field_format, field_data)[0]
+        decoded_data[field_name] = field_value
+        index += field_size
+
+    return decoded_data
+
+# Define the dashboard maker function
+def dashboard_maker(decoded_data):
+    # Process the decoded data and create a dashboard
+    # You can use the decoded_data dictionary to display the data or perform actions as needed
+    print("Creating Dashboard...")
+    print("Example Dashboard Data:")
+    for field_name, field_value in decoded_data.items():
+        print(f"{field_name}: {field_value}")
 
 # Main execution
 if __name__ == "__main__":
-    # Start a separate thread for the UDP listener
-    udp_listener_thread = threading.Thread(target=udp_listener)
-    udp_listener_thread.daemon = True
-    udp_listener_thread.start()
-
-    print("Press 'q' and Enter to exit.")
-
-    while not exit_flag:
-        try:
-            user_input = input()
-            if user_input.lower() == "q":
-                exit_program()
-        except KeyboardInterrupt:
-            exit_program()
-
-    # Gracefully exit the program
-    sys.exit(0)
+    for hex_data in udp_listener():
+        decoded_data = decode_data(hex_data)
+        dashboard_maker(decoded_data)
