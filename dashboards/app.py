@@ -11,7 +11,7 @@ app.layout = html.Div([
     dcc.Graph(id='real-time-chart'),
     dcc.Interval(
         id='interval-component',
-        interval=1000,  # Update every second (adjust as needed)
+        interval=10,  # Update every second (adjust as needed)
         n_intervals=0
     )
 ])
@@ -21,13 +21,13 @@ app.layout = html.Div([
     [dash.dependencies.Input('interval-component', 'n_intervals')]
 )
 def update_chart(n_intervals):
-    x_data = list(range(10))  # Replace with your x-axis data
-    y_data = [random.uniform(0, 100) for _ in x_data]  # Replace with your y-axis data
+    x_data = list(range(1000))  # Replace with your x-axis data
+    y_data = [random.uniform(40, 55) for _ in x_data]  # Replace with your y-axis data
     
     figure = go.Figure(data=[
-        go.Scatter(x=x_data, y=y_data, mode='lines+markers')
+        go.Scatter(x=x_data, y=y_data, mode='lines', line=dict(color='red'))
     ])
-    
+    figure.update_yaxes(range=[0, 100])
     return figure
 
 if __name__ == '__main__':

@@ -2,8 +2,8 @@ from scapy.all import IP, UDP, send
 import binascii
 
 # Define source and destination IP addresses
-src_ip = "172.16.0.1"
-dst_ip = "172.16.0.2"
+src_ip = "127.0.0.1"
+dst_ip = "127.0.0.1"
 
 # Define source and destination ports
 src_port = 5200
