@@ -4,7 +4,7 @@ def readFile(path: str) -> bytes:
     # The binary data in little-endian format
     data = []
     with open(path, "r") as file:
-        hex_data = file.readlines()
+        hex_data = file.readline()
         # Combine the lines into a single hexadecimal string
         hex_data = "".join(hex_data).strip()
         # Convert the hexadecimal string to bytes and add it to the array
