@@ -110,8 +110,6 @@ def decode(data: bytes, idx: int, format: str):
     return int.from_bytes(data[idx:idx+size], byteorder="little", signed=(format[0] == 'S'))
 
 def decode_packet(data: bytes):
-    #isRaceOn = int.from_bytes(data[0:4], byteorder="little", signed=True)                                 
-    #isRaceOn = decode(data, 0, "S32")
     idx = 0
     res = []
     for field in dash_packet_fields:
