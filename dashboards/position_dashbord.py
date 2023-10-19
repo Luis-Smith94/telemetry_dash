@@ -31,7 +31,6 @@ def print_pos_dash():
     for data in files.readFile("datas/dataset.txt"):
         pos_x = decoder.decode_packet(data).get("PositionX", 0)
         pos_y = decoder.decode_packet(data).get("PositionY", 0)
-        #print("x, y : (" + str(pos_x) + ", " + str(pos_y) + ")")
         position_x.append(pos_x)
         position_y.append(pos_y)
 
