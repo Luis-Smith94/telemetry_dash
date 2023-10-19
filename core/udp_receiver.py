@@ -4,7 +4,7 @@ import socket
 HOST_IP = "0.0.0.0"
 HOST_PORT = 5300
 """
-BUFFER_SIZE = 1024
+BUFFER_SIZE = 4094
 
 """
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -26,7 +26,7 @@ def listen(ip: str, port: int):
     while True:
         try:
             data, addr = s.recvfrom(BUFFER_SIZE)
-            print("Message reçu")
+            # print("Message reçu")
             yield data
         except:
             print("Reception timeout: stop")
