@@ -111,11 +111,10 @@ def decode(data: bytes, idx: int, format: str):
 
 def decode_packet(data: bytes):
     idx = 0
-    res = []
-    for field in dash_packet_fields:
-        res.append(decode(data, idx, field[1]))
+    res = {}
+    for i, field in enumerate(dash_packet_fields):
+        res[dash_packet_fields[i][0]] = decode(data, idx, field[1])
         idx += getFormatSize(field[1])
 
-    print(f"Final idx = {idx}")
     return res
 
