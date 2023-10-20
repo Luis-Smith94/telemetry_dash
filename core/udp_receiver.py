@@ -32,6 +32,21 @@ def listen(ip: str, port: int):
             print("Reception timeout: stop")
             s.close()
             return 
+
+def listenOnce(ip: str, port: int):
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.bind((ip, port))
+    s.settimeout(30)
+
+    print(f"Attente de message sur {ip}, port {port}...")
+    try:
+        data, addr = s.recvfrom(BUFFER_SIZE)
+        # print("Message reçu")
+        return data
+    except:
+        print("Reception timeout: stop")
+        s.close()
+        return None
         
 
 
