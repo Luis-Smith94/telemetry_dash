@@ -38,7 +38,7 @@ def listenOnce(ip: str, port: int):
     s.bind((ip, port))
     s.settimeout(30)
 
-    print(f"Attente de message sur {ip}, port {port}...")
+    # print(f"Attente de message sur {ip}, port {port}...")
     try:
         data, addr = s.recvfrom(BUFFER_SIZE)
         # print("Message reçu")
