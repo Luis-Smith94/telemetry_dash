@@ -1,0 +1,489 @@
+{
+    "forza_metrics": {
+        "receiver": {
+            "ip": "127.0.0.1",
+            "port": 5300,
+            "buffer_size": 4094
+        },
+        "decoder": {
+            "fields": [
+                {
+                    "name": "IsRaceOn",
+                    "format": "S32",
+                    "size": 4
+                },
+                {
+                    "name": "TimestampMS",
+                    "format": "U32",
+                    "size": 4
+                },
+                {
+                    "name": "EngineMaxRpm",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "EngineIdleRpm",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "CurrentEngineRpm",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "AccelerationX",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "AccelerationY",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "AccelerationZ",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "VelocityX",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "VelocityY",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "VelocityZ",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "AngularVelocityX",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "AngularVelocityY",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "AngularVelocityZ",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "Yaw",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "Pitch",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "Roll",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "NormalizedSuspensionTravelFrontLeft",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "NormalizedSuspensionTravelFrontRight",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "NormalizedSuspensionTravelRearLeft",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "NormalizedSuspensionTravelRearRight",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "TireSlipRatioFrontLeft",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "TireSlipRatioFrontRight",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "TireSlipRatioRearLeft",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "TireSlipRatioRearRight",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "WheelRotationSpeedFrontLeft",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "WheelRotationSpeedFrontRight",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "WheelRotationSpeedRearLeft",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "WheelRotationSpeedRearRight",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "WheelOnRumbleStripFrontLeft",
+                    "format": "S32",
+                    "size": 4
+                },
+                {
+                    "name": "WheelOnRumbleStripFrontRight",
+                    "format": "S32",
+                    "size": 4
+                },
+                {
+                    "name": "WheelOnRumbleStripRearLeft",
+                    "format": "S32",
+                    "size": 4
+                },
+                {
+                    "name": "WheelOnRumbleStripRearRight",
+                    "format": "S32",
+                    "size": 4
+                },
+                {
+                    "name": "WheelInPuddleDepthFrontLeft",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "WheelInPuddleDepthFrontRight",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "WheelInPuddleDepthRearLeft",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "WheelInPuddleDepthRearRight",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "SurfaceRumbleFrontLeft",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "SurfaceRumbleFrontRight",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "SurfaceRumbleRearLeft",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "SurfaceRumbleRearRight",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "TireSlipAngleFrontLeft",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "TireSlipAngleFrontRight",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "TireSlipAngleRearLeft",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "TireSlipAngleRearRight",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "TireCombinedSlipFrontLeft",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "TireCombinedSlipFrontRight",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "TireCombinedSlipRearLeft",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "TireCombinedSlipRearRight",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "SuspensionTravelMetersFrontLeft",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "SuspensionTravelMetersFrontRight",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "SuspensionTravelMetersRearLeft",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "SuspensionTravelMetersRearRight",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "CarOrdinal",
+                    "format": "S32",
+                    "size": 4
+                },
+                {
+                    "name": "CarClass",
+                    "format": "S32",
+                    "size": 4
+                },
+                {
+                    "name": "CarPerformanceIndex",
+                    "format": "S32",
+                    "size": 4
+                },
+                {
+                    "name": "DrivetrainType",
+                    "format": "S32",
+                    "size": 4
+                },
+                {
+                    "name": "NumCylinders",
+                    "format": "S32",
+                    "size": 4
+                },
+                {
+                    "name": "PositionX",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "PositionY",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "PositionZ",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "Speed",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "Power",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "Torque",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "TireTempFrontLeft",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "TireTempFrontRight",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "TireTempRearLeft",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "TireTempRearRight",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "Boost",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "Fuel",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "DistanceTraveled",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "BestLap",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "LastLap",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "CurrentLap",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "CurrentRaceTime",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "LapNumber",
+                    "format": "U16",
+                    "size": 2
+                },
+                {
+                    "name": "RacePosition",
+                    "format": "U8",
+                    "size": 1
+                },
+                {
+                    "name": "Accel",
+                    "format": "U8",
+                    "size": 1
+                },
+                {
+                    "name": "Brake",
+                    "format": "U8",
+                    "size": 1
+                },
+                {
+                    "name": "Clutch",
+                    "format": "U8",
+                    "size": 1
+                },
+                {
+                    "name": "HandBrake",
+                    "format": "U8",
+                    "size": 1
+                },
+                {
+                    "name": "Gear",
+                    "format": "U8",
+                    "size": 1
+                },
+                {
+                    "name": "Steer",
+                    "format": "S8",
+                    "size": 1
+                },
+                {
+                    "name": "NormalizedDrivingLine",
+                    "format": "S8",
+                    "size": 1
+                },
+                {
+                    "name": "NormalizedAIBrakeDifference",
+                    "format": "S8",
+                    "size": 1
+                },
+                {
+                    "name": "TireWearFrontLeft",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "TireWearFrontRight",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "TireWearRearLeft",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "TireWearRearRight",
+                    "format": "F32",
+                    "size": 4
+                },
+                {
+                    "name": "TrackOrdinal",
+                    "format": "S32",
+                    "size": 4
+                }
+            ]
+        },
+        "plots": {
+            "Accel": {
+                "color": "green",
+                "idx": 1,
+                "ylim": [
+                    0,
+                    100
+                ]
+            },
+            "Brake": {
+                "color": "red",
+                "idx": 2,
+                "ylim": [
+                    0,
+                    100
+                ]
+            },
+            "default": {
+                "color": "grey",
+                "idx": 3,
+                "ylim": [
+                    0,
+                    100
+                ]
+            }
+        }
+    }
+}
